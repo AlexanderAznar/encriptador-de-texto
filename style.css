@@ -1,0 +1,440 @@
+
+*{
+    font-family: 'Inter';
+    font-weight: 400;
+    line-height: 150%;
+}
+
+body{
+    background-image: url(fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    height: auto;
+}
+
+.navbar{
+    height: 50px;
+    font-size: 20px;
+}
+
+#ulNav{
+    align-items: center;
+}
+
+#imgNav{
+    width: 350px;
+    position: fixed;
+    bottom: 10px;
+}
+
+#logoOne{
+    width: 80px;
+    height: 40px;
+}
+
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 45px;
+}
+
+.containers{
+    width: 100%;
+}
+
+.text-area{
+    width: 84%;
+    height: 400px;
+    border: none;
+    color: #FFFFFF;
+    text-transform: lowercase;
+    background: rgba(180, 199, 204, 0.5);
+    border-radius: 10px 50px 10px 50px;
+    margin: 10px;
+    padding: 10px;
+}
+
+::placeholder {
+    color: #000000;
+    font-size: 20px;
+}
+
+.text-area:focus {
+    outline: none;
+}
+
+.message{
+    width: 70%;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.9);
+    background-image: url(codigo.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 10px 50px 10px 50px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+.message:focus {
+    outline: none;
+}
+
+.buttons{
+    display: flex;
+    margin-top: 18px;
+    margin-left: 10px;
+}
+
+#decryptBtn{
+    background: #d8dfe8;
+    border: 2px solid #54BADD;
+    border-radius: 0.3rem;
+    color: #0a3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 40%;
+    opacity: 0.95;
+    font-size: 20px;
+}
+
+#decryptBtn:hover{
+    font-size: 22px;
+}
+
+#encryptBtn{
+    background-color: #0a3871;
+    border: 2px solid #54BADD;
+    border-radius: 0.3rem;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    width: 40%;
+    opacity: 0.95;
+    font-size: 20px;
+}
+
+#encryptBtn:hover{
+    font-size: 22px;
+}
+
+#copyBtn {
+    border: 2px solid #54BADD;
+    background-color: #0a3871;
+    opacity: 0.95;
+    border-radius: 0.3rem;
+    color: #FFFFFF;
+    font-size: 20px;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 130px;
+    margin-top: 10px;
+    width: 40%;
+}
+
+#copyBtn:hover{
+    font-size: 22px;
+}
+
+.information {
+    color: #cde0f3;
+    font-size: 20px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.popupBienvenida{
+    background-color: #0997c6ec;
+    width: 450px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px 40px 8px 40px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+    transition: 1s ease all;
+    color: white;
+    z-index: 1;
+}
+
+.popupBienvenida button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.popupBienvenida p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+#btnContinuar{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 0;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#btnContinuar:hover{
+    border: 2px solid #0a3871;
+    color: #0a3871;
+    font-size: 20px;
+}
+
+.popup2{
+    background-color: #0997c6ec;
+    width: 450px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px 40px 8px 40px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.popup2 button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.popup2 p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+#btnCerrar{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 0;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#btnCerrar:hover{
+    border: 2px solid #0a3871;
+    color: #0a3871;
+    font-size: 20px;
+}
+
+.popup3{
+    background-color: #209a1cec;
+    width: 450px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px 40px 8px 40px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.popup3 button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.popup3 p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+#btnAceptar2{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 0;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#btnAceptar2:hover{
+    border: 2px solid #000000;
+    color: #000000;
+    font-size: 20px;
+}
+
+.popupCaracteres{
+    background-color: #c60909ec;
+    width: 450px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px 40px 8px 40px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.popupCaracteres button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.popupCaracteres p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+#btnAceptar{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 0;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#btnAceptar:hover{
+    border: 2px solid #000000;
+    color: #000000;
+    font-size: 20px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+
+@media screen and (max-width:768px){
+    body{
+        height: auto;
+    }
+
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-area{
+        width: 95%;
+        height: 250px;
+    }
+
+    .message{
+        width: 95%;
+        height: 250px;
+        margin-left: 10px;
+    }
+
+    #decryptBtn{
+        background: #d8dfe8;
+        border: 2px solid #54BADD;
+        border-radius: 0.3rem;
+        color: #0a3871;
+        cursor: pointer;
+        height: 40px;
+        margin-left: 5px;
+        width: 420px;
+    }
+    
+    #encryptBtn{
+        background-color: #0a3871;
+        border: 2px solid #54BADD;
+        border-radius: 0.3rem;
+        color: white;
+        cursor: pointer;
+        height: 40px;
+        width: 420px;
+        margin-left: -5px;
+    }
+
+    #copyBtn{
+        width: 100%;
+        margin-left: auto;
+        align-items: center;
+        height: 40px;
+    }
+    
+    footer {
+        width: 100%;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 20px;
+        margin-top: 10px;
+        bottom: 0px;
+    }
+}

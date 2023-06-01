@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="encriptador, encriptar texto, desencriptar, oraclenexteducation, one, g5, alura">
+    <link rel="shortcut icon" href="favicon.png">
+    <title>Encriptador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="popupBienvenida">
+        <button id="close">&times;</button>
+        <h2>Encriptador de texto</h2>
+        <p>
+            Este encriptador fue desarrollado con el objetivo de cumplir con el Challenge Nº1 "Encriptador de texto" del programa ONE G5 de Oracle & Alura Latam.
+        </p>
+        <a class="btnpopup" href="#" id="btnContinuar">Continuar</a>
+    </div>
+    <div class="popup2">
+        <button id="close2">&times;</button>
+        <h2>Características</h2>
+        <p>
+            El encriptador no admite letras mayúsculas, acentos o caractéres especiales.
+        </p>
+        <a class="btnpopup" href="#" id="btnCerrar">Aceptar</a>
+    </div>
+    <div class="popup3">
+        <button id="close3">&times;</button>
+        <h2>¡Copiado!</h2>
+        <p>
+            Texto copiado al portapapeles.
+        </p>
+        <a class="btnpopup" href="#" id="btnAceptar">Aceptar</a>
+    </div>
+    <div class="popupCaracteres">
+        <button id="close4">&times;</button>
+        <h2>¡Error!</h2>
+        <p>
+             El texto no debe contener letras mayúsculas, acentos o caracteres especiales. Por favor revisa el texto para continuar.
+        </p>
+        <a class="btnpopup" href="#" id="btnAceptar2">Aceptar</a>
+    </div>
+    <nav id="navbar" class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+        <img src="one-logo.png" id="logoOne" class="d-inline-block align-top" alt="">  
+        <a class="navbar-brand" href="#">Encriptador de texto</a>
+        <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Encriptador by Alexander Aznar</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                    <div class="offcanvas-body">
+                        <ul id="ulNav" class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/alexanderaznar/" target="_blank"><i class="fa-brands fa-linkedin-in fa-beat-fade" style="color: #ffffff;"></i> LinkedIn <span class="sr-only">(current)</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://github.com/AlexanderAznar" target="_blank"><i class="fa-brands fa-github fa-beat-fade" style="color: #ffffff;"></i> Github</a></li>
+                            <li class="nav-item"><a class="nav-link" href="mailto:alexanderaznar@outlook.com"><i class="fa-regular fa-envelope fa-beat-fade" style="color: #ffffff;"></i> Contacto</a></li>
+                            <img id="imgNav" src="logo_oracle&alura.svg" alt="Logo de Oracle & Alura Latam">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </nav>
+    <main>
+        <section class="containers">
+            <textarea class="text-area" id="encryptedText" cols="30" rows="10" placeholder="Ingrese el texto aquí*"></textarea>
+            <div>
+                <h6 class="information">*Solo letras minúsculas y sin acentos.</h6>
+            </div>
+            <div class="buttons">
+                <button type="button" id="encryptBtn" onclick="encryptBtn()"><i class="fa-solid fa-lock"></i> Encriptar</button>
+                <button type="button" id="decryptBtn" onclick="decryptBtn()"><i class="fa-solid fa-unlock-keyhole"></i> Desencriptar</button>   
+            </div>
+        </section>
+        <section class="containers">
+            <textarea class="message" name="results" id="decryptedText" cols="20" rows="10"></textarea>
+            <div>
+                <button type="button" id="copyBtn" onclick="copy()"><i class="fa-regular fa-copy"></i> Copiar Texto</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="logo_oracle&alura.svg" alt="Logo de Oracle & Alura Latam">
+        <p class="copyright">&copy; Copyright Alexander Aznar ~ 2023</p>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</html>
